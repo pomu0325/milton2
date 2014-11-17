@@ -41,7 +41,7 @@ public class MultiStatusEntity implements Response.Entity {
     @Override
     public void write(Response response, OutputStream outputStream) throws Exception {
 
-        XmlWriter writer = new XmlWriter( response.getOutputStream() );
+        XmlWriter writer = new XmlWriter( outputStream );
         writer.writeXMLHeader();
         writer.open( "multistatus xmlns:D" + "=\"" + WebDavProtocol.NS_DAV + ":\"" ); // only single namespace for this method
         writer.newLine();
